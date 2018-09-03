@@ -20,7 +20,9 @@ import io.realm.RealmResults;
 import io.realm.RealmSchema;
 import io.realm.Sort;
 
-//http://blog.csdn.net/wa172126691/article/details/53103973
+//使用方法 http://blog.csdn.net/wa172126691/article/details/53103973
+
+//空间优化 https://blog.csdn.net/u012003460/article/details/74625600
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private final String TAG = "MainActivity";
     private Realm mRealm;
@@ -190,6 +192,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //Result.sort(“name”);
 //        result.sort("name", Sort.DESCENDING);//降序
         result.sort("name", Sort.ASCENDING);//升序
+
+        mRealm.close();
 
         showUser(result);
 //        Log.d(TAG, "select: "+user.toString());
