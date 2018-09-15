@@ -193,9 +193,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        result.sort("name", Sort.DESCENDING);//降序
         result.sort("name", Sort.ASCENDING);//升序
 
-        mRealm.close();
-
         showUser(result);
+//        mRealm.close();
+
 //        Log.d(TAG, "select: "+user.toString());
     }
 
